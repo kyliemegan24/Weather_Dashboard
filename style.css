@@ -1,0 +1,80 @@
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+header {
+
+    font-family: Georgia, 'Times New Roman', Times, serif ;
+    font-size: 50px;
+    color: lightpink;
+    background-color: black;
+    text-align: center;
+    margin-bottom: 40px;
+  
+}
+
+#weatherView {
+    
+    background: pink;
+    color: black;
+    width: 20%;
+    text-align: center;
+    
+
+}
+
+#forecast1 {
+
+    background-color: lightskyblue;
+    width: 15%;
+    float: left;
+    text-align: center;
+    
+}
+#forecast2 {
+
+    background-color: lightskyblue;
+    width: 15%;
+    float: left;
+    margin-left: 5px;
+    text-align: center;
+    
+}
+#forecast3 {
+
+    background-color: lightskyblue;
+    width: 15%;
+    float: left;
+    margin-left: 5px;
+    text-align: center;
+    
+}
+#forecast4 {
+
+    background-color: lightskyblue;
+    width: 15%;
+    float: left;
+    margin-left: 5px;
+    text-align: center;
+    
+}
+#forecast5 {
+
+    background-color: lightskyblue;
+    width: 15%;
+    float: left;
+    margin-left: 5px;
+    text-align: center;
+    
+}
+
+
+
+
+/* #city {
+    background: lightgreen;
+    color: black;
+    width: 20%;
+
+
+} */

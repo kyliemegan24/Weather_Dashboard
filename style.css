@@ -19,6 +19,7 @@ header {
     color: black;
     width: 20%;
     text-align: center;
+    border-radius: 10px;
     
 
 }
@@ -29,6 +30,7 @@ header {
     width: 15%;
     float: left;
     text-align: center;
+    border-radius: 10px;
     
 }
 #forecast2 {
@@ -38,6 +40,7 @@ header {
     float: left;
     margin-left: 5px;
     text-align: center;
+    border-radius: 10px;
     
 }
 #forecast3 {
@@ -47,6 +50,7 @@ header {
     float: left;
     margin-left: 5px;
     text-align: center;
+    border-radius: 10px;
     
 }
 #forecast4 {
@@ -56,6 +60,7 @@ header {
     float: left;
     margin-left: 5px;
     text-align: center;
+    border-radius: 10px;
     
 }
 #forecast5 {
@@ -65,6 +70,7 @@ header {
     float: left;
     margin-left: 5px;
     text-align: center;
+    border-radius: 10px;
     
 }
 

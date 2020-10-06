@@ -14,21 +14,33 @@ function displayCityInfo() {
 
         var city = response.name;
 
-        var pOne = $("<p>").text("City: " + city);
+        var pOne = $("<p>").text(city);
 
         cityDiv.append(pOne);
 
         var temp = (response.main.temp - 273.15) * 1.80 + 32;
 
-        var pTwo = $("<p>").text("Temperature " + temp + " degrees Farenheit");
+        var tempy = Math.floor(temp);
+
+        var pTwo = $("<p>").text("Temperature: " + tempy + " degrees F");
 
         cityDiv.append(pTwo);
 
-        var icon = response.weather[0].icon;
+        var iconCode = response.weather[0].icon;
 
-        var image = $("<img>").attr("src", icon);
+        console.log(iconCode);
+
+        var iconUrl = "http://openweathermap.org/img/wn/" + iconCode + "@2x.png";
+
+        console.log(iconUrl)
+
+        // this is where it stops working for the icon!
+        var image = $(".icon").html("<img src='" + iconUrl + "'>"); 
+        
+        console.log(image);
 
         cityDiv.append(image);
+        // icon issues above
 
         var humidity = response.main.humidity;
 
@@ -79,9 +91,17 @@ function displayForecastDayOne() {
 
         var cityDiv = $("<div class='city'>");
 
+        var date = response.list[4].dt_txt;
+
+        var pDate = $("<p>").text(date);
+
+        cityDiv.append(pDate);
+
         var temp = (response.list[4].main.temp - 273.15) * 1.80 + 32;
 
-        var pTwo = $("<p>").text("Temperature " + temp + " degrees Farenheit");
+        var tempy = Math.floor(temp);
+
+        var pTwo = $("<p>").text("Temperature: " + tempy + " degrees F");
 
         cityDiv.append(pTwo);
 
@@ -114,9 +134,18 @@ function displayForecastDayTwo() {
 
         var cityDiv = $("<div class='city'>");
 
-        var temp = (response.list[12].main.temp - 273.15) * 1.80 + 32;
+        var date = response.list[12].dt_txt;
 
-        var pTwo = $("<p>").text("Temperature " + temp + " degrees Farenheit");
+        var pDate = $("<p>").text(date);
+
+        cityDiv.append(pDate);
+
+        var temp = (response.list[12].main.temp - 273.15) * 1.80 + 32;
+        
+
+        tempy = Math.floor(temp);
+
+        var pTwo = $("<p>").text("Temperature: " + tempy + " degrees F");
 
         cityDiv.append(pTwo);
 
@@ -149,9 +178,17 @@ function displayForecastDayThree() {
 
         var cityDiv = $("<div class='city'>");
 
+        var date = response.list[20].dt_txt;
+
+        var pDate = $("<p>").text(date);
+
+        cityDiv.append(pDate);
+
         var temp = (response.list[20].main.temp - 273.15) * 1.80 + 32;
 
-        var pTwo = $("<p>").text("Temperature " + temp + " degrees Farenheit");
+        var tempy = Math.floor(temp);
+
+        var pTwo = $("<p>").text("Temperature: " + tempy + " degrees F");
 
         cityDiv.append(pTwo);
 
@@ -184,9 +221,17 @@ function displayForecastDayFour() {
 
         var cityDiv = $("<div class='city'>");
 
+        var date = response.list[28].dt_txt;
+
+        var pDate = $("<p>").text(date);
+
+        cityDiv.append(pDate);
+
         var temp = (response.list[28].main.temp - 273.15) * 1.80 + 32;
 
-        var pTwo = $("<p>").text("Temperature " + temp + " degrees Farenheit");
+        var tempy = Math.floor(temp);
+
+        var pTwo = $("<p>").text("Temperature: " + tempy + " degrees F");
 
         cityDiv.append(pTwo);
 
@@ -219,9 +264,17 @@ function displayForecastDayFive() {
 
         var cityDiv = $("<div class='city'>");
 
+        var date = response.list[36].dt_txt;
+
+        var pDate = $("<p>").text(date);
+
+        cityDiv.append(pDate);
+
         var temp = (response.list[36].main.temp - 273.15) * 1.80 + 32;
 
-        var pTwo = $("<p>").text("Temperature " + temp + " degrees Farenheit");
+        var tempy = Math.floor(temp);
+
+        var pTwo = $("<p>").text("Temperature: " + tempy + " degrees F");
 
         cityDiv.append(pTwo);
 

@@ -35,7 +35,7 @@ function displayCityInfo() {
         console.log(iconUrl)
 
         // this is where it stops working for the icon!
-        var image = $(".icon").html("<img src='" + iconUrl + "'>"); 
+        var image = $("<img>").attr("src", iconUrl)
         
         console.log(image);
 
@@ -105,11 +105,14 @@ function displayForecastDayOne() {
 
         cityDiv.append(pTwo);
 
-        var icon = response.list[4].weather[0].icon;
+        var iconCode = response.list[4].weather[0].icon;
 
-        var image = $("<img>").attr("src", icon)
+        var iconUrl = "http://openweathermap.org/img/wn/" + iconCode + "@2x.png";
+
+        var image = $("<img>").attr("src", iconUrl)
 
         cityDiv.append(image);
+
 
         var humidity = response.list[4].main.humidity;
 
@@ -149,9 +152,11 @@ function displayForecastDayTwo() {
 
         cityDiv.append(pTwo);
 
-        var icon = response.list[12].weather[0].icon;
+        var iconCode = response.list[12].weather[0].icon;
 
-        var image = $("<img>").attr("src", icon)
+        var iconUrl = "http://openweathermap.org/img/wn/" + iconCode + "@2x.png";
+
+        var image = $("<img>").attr("src", iconUrl)
 
         cityDiv.append(image);
 
@@ -192,9 +197,11 @@ function displayForecastDayThree() {
 
         cityDiv.append(pTwo);
 
-        var icon = response.list[20].weather[0].icon;
+        var iconCode = response.list[20].weather[0].icon;
 
-        var image = $("<img>").attr("src", icon)
+        var iconUrl = "http://openweathermap.org/img/wn/" + iconCode + "@2x.png";
+
+        var image = $("<img>").attr("src", iconUrl)
 
         cityDiv.append(image);
 
@@ -235,9 +242,11 @@ function displayForecastDayFour() {
 
         cityDiv.append(pTwo);
 
-        var icon = response.list[28].weather[0].icon;
+        var iconCode = response.list[28].weather[0].icon;
 
-        var image = $("<img>").attr("src", icon)
+        var iconUrl = "http://openweathermap.org/img/wn/" + iconCode + "@2x.png";
+
+        var image = $("<img>").attr("src", iconUrl)
 
         cityDiv.append(image);
 
@@ -278,9 +287,11 @@ function displayForecastDayFive() {
 
         cityDiv.append(pTwo);
 
-        var icon = response.list[36].weather[0].icon;
+        var iconCode = response.list[36].weather[0].icon;
 
-        var image = $("<img>").attr("src", icon)
+        var iconUrl = "http://openweathermap.org/img/wn/" + iconCode + "@2x.png";
+
+        var image = $("<img>").attr("src", iconUrl)
 
         cityDiv.append(image);
 
@@ -313,27 +324,38 @@ function saveHistory() {
     // localStorage.setItem('history', JSON.stringify(ul));
     // localStorage.getItem('history');
     
-    $(".saved").on("click", function(event) {
-        event.preventDefault();
-    
-        $("#weatherView").empty();
-        $("#forecast").empty();
-    
-        displayCityInfo();
-        displayForecastDayOne();
-        displayForecastDayTwo();
-        displayForecastDayThree();
-        displayForecastDayFour();
-        displayForecastDayFive();
-    });
+  
 
 }
+
+
+$(document).on("click", ".saved", function(event) {
+    event.preventDefault();
+
+    $("#weatherView").empty();
+    $("#forecast1").empty();
+    $("#forecast2").empty();
+    $("#forecast3").empty();
+    $("#forecast4").empty();
+    $("#forecast5").empty();
+
+    displayCityInfo();
+    displayForecastDayOne();
+    displayForecastDayTwo();
+    displayForecastDayThree();
+    displayForecastDayFour();
+    displayForecastDayFive();
+});
 
 $(".searchBtn").on("click", function(event) {
     event.preventDefault();
 
     $("#weatherView").empty();
-    $("#forecast").empty();
+    $("#forecast1").empty();
+    $("#forecast2").empty();
+    $("#forecast3").empty();
+    $("#forecast4").empty();
+    $("#forecast5").empty();
 
     displayCityInfo();
     displayForecastDayOne();

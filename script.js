@@ -173,7 +173,7 @@ function displayForecastDayOne(city) {
 }
 
 function displayForecastDayTwo(city) {
-    // var cityNameF = $("#citySearch").val().trim();
+    
     var queryURLF =  "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&APPID=72e0c923e53d160e5213a8ed3091e1f4";
 
     $.ajax({
@@ -217,7 +217,7 @@ function displayForecastDayTwo(city) {
 }
 
 function displayForecastDayThree(city) {
-    // var cityNameF = $("#citySearch").val().trim();
+    
     var queryURLF =  "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&APPID=72e0c923e53d160e5213a8ed3091e1f4";
 
     $.ajax({
@@ -261,7 +261,7 @@ function displayForecastDayThree(city) {
 }
 
 function displayForecastDayFour(city) {
-    // var cityNameF = $("#citySearch").val().trim();
+    
     var queryURLF =  "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&APPID=72e0c923e53d160e5213a8ed3091e1f4";
 
     $.ajax({
@@ -305,7 +305,7 @@ function displayForecastDayFour(city) {
 }
 
 function displayForecastDayFive(city) {
-    // var cityNameF = $("#citySearch").val().trim();
+   
     var queryURLF =  "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&APPID=72e0c923e53d160e5213a8ed3091e1f4";
 
     $.ajax({
@@ -354,18 +354,7 @@ function saveHistory() {
 
     storageArray.push(cityName);
 
-    localStorage.setItem('history', JSON.stringify(storageArray));
-
-    // var ul = $("#list");
-
-    // var li = $("<li>");
-
-    // var btn = $("<btn class='saved'>").text(cityName);
-
-    // li.append(btn);
-
-    // ul.prepend(li);
-    
+    localStorage.setItem('history', JSON.stringify(storageArray));    
     
 }
 

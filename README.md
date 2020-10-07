@@ -6,14 +6,15 @@ This weather dashboard allows you to search for a city and view it's current wea
 
 
 Links: 
-Repository Link - 
+Repository Link - https://github.com/kyliemegan24/Weather_Dashboard
 
-Gitpages link - 
+Gitpages link - https://kyliemegan24.github.io/Weather_Dashboard/
 
 Usage Instructions:
 
 Type in the city of your choosing and click "search." Click the buttons generated below the search bar to view the cities you've previously searched for.
 
+<img src="weather_dashboard.png">
 
 Installation: N/A
 
